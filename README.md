@@ -48,5 +48,3 @@ https://hub.docker.com/r/manisankarrr/lemonade-stand
 
 
 ---
-
-*"When life gives you lemons, automate their delivery!"* 🚚💨
