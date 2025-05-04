@@ -1,0 +1,32 @@
+name: Lemonade Delivery Pipeline
+
+on:
+  push:
+    branches: ["main"]  # Run when we update main recipe book
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest  # Use a clean kitchen
+    
+    steps:
+    # Step 1: Get the recipe book
+    - name: Checkout Code
+      uses: actions/checkout@v4  # Official code checkout action
+    
+    # Step 2: Login to Docker Hub (show ID to truck driver)
+    - name: Login to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}  # Your Docker ID
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}  # Your Docker password
+    
+    # Step 3: Build and push the lemonade bottles
+    - name: Build and Push
+      uses: docker/build-push-action@v4
+      with:
+        context: .  # Where to find Dockerfile
+        file: ./Dockerfile  # Our bottling instructions
+        tags: |
+          manisankarrr/lemonade-stand:latest
+          manisankarrr/lemonade-stand:${{ github.sha }}
+        push: true  # Actually push to Docker Hub
