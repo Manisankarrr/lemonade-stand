@@ -19,9 +19,9 @@ A Dockerized Node.js web application demonstrating CI/CD pipelines with GitHub A
 
 ### Run Locally
 ```bash
-docker run -p 4000:3000 manisankarrr/lemonade-stand
+docker run -p 4003:3000 manisankarrr/lemonade-stand
 ```
-Visit http://localhost:4000
+Visit http://localhost:4003
 
 ### Development Setup
 ```bash
@@ -46,8 +46,6 @@ Our automation workflow:
 Find pre-built images at:  
 https://hub.docker.com/r/manisankarrr/lemonade-stand
 
-## 📝 License
-MIT License - see [LICENSE](LICENSE) for details
 
 ---
 
