@@ -1,0 +1,77 @@
+:root {
+    --primary: #FFD700;
+    --secondary: #FFA500;
+    --background: #FFF8DC;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background: var(--background);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #333;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.tagline {
+    color: #666;
+    font-style: italic;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.lemonade-glass {
+    width: 100px;
+    height: 150px;
+    margin: 20px auto;
+    background: url('/images/lemonade.jpg') center/cover;
+    border-radius: 0 0 30px 30px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #f8f8f8;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
